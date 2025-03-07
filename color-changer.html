@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #00ffcc;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Color Changer App</h1>
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+</body>
+<script>
+    function changeColor() {
+    const colors = ["#ff5733", "#33ff57", "#3357ff", "#ff33a8", "#ffdb33", "#8d33ff", "#ff6b6b", "#6bffb3",
+     "#6b6bff", "#ffa07a", "#20b2aa", "#ff1493", 
+    "#ffd700", "#4b0082", "#00ced1", "#ff4500", "#1e90ff", "#ff69b4", 
+    "#8a2be2", "#7fffd4", "#dc143c", "#32cd32", "#ff8c00", "#48d1cc", 
+    "#4169e1", "#ff6347", "#00ff7f", "#ff00ff", "#b22222", "#00bfff",
+    "#008080", "#ffdead", "#800000", "#008000", "#000080", "#8b4513"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+}
+</script>
+</html>
